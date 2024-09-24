@@ -31,11 +31,22 @@ function App() {
         });
     }
 
+
     return (
         <>
             <main className='main'>
                 <TodoInput handleADDTodo={handleADDTodo} />
                 <TodoList todo={todo} handleDeleteTodo={handleDeleteTodo} handleEditeTodo={handleEditeTodo} />
+                {
+                    todo.length!== 0 ? <div className={'row'} >
+                        <button className={'delete'} onClick={()=>{
+                            Cookies.set('todo', JSON.stringify([]), { expires: 30 });
+                            setTodo([]);
+                        }}>clear </button>
+                    </div> : <div></div>
+                }
+
+
             </main>
         </>
     )

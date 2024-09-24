@@ -8,6 +8,7 @@
 h1,
 h2,
 h3,
+delete,
 button {
     font-family: 'Press Start 2P', system-ui;
 }
@@ -15,7 +16,22 @@ button {
 .strikethrough {
     text-decoration: line-through;
 }
-
+.delete{
+    background-color: red;
+    color: white;
+    height: 50px;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    align-items: stretch;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+.delete:hover{
+    opacity: 0.7;
+    color: #202124;
+}
 input{
     background-color: white;
     font-size: 20px;
@@ -57,6 +73,10 @@ header{
     gap: 14px;
     padding-top: 50px;
     position: static;
+}
+.row{
+    display: grid;
+    place-items: center;
 }
 
 header input {
